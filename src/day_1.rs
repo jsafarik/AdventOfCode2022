@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let inventory_str = include_str!("resources/day_1_elves_inventory.txt");
     let (index, calories) = get_elf_with_most_food_in_calories(inventory_str);
