@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let rucksacks_str = include_str!("resources/day_3_rucksacks.txt");
     let (misplaced_sum, badges_sum) = calculate_misplaced_types_and_badges_sum(rucksacks_str);
