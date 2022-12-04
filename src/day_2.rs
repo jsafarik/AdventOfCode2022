@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let game_str = include_str!("resources/day_2_rock_paper_scissors.txt");
     println!("Incorrect strategy: {}", calculate_score(game_str, false));
