@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let cleaning_plan_str = include_str!("resources/day_4_cleaning.txt");
     println!("There are {} fully contained plans", count_contained(cleaning_plan_str, true));
