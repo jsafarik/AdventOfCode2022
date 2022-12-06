@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 pub fn main() {
     let cranes_str = include_str!("resources/day_5_crates.txt");
     let mut to_rearrange = parse_initial_state(cranes_str);
