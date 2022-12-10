@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let communication = include_str!("resources/day_6_packet_transfer.txt");
     println!("Prefix is {} long", find_communication_prefix(communication, 4));
