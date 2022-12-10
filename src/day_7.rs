@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     parse_input(include_str!("resources/day_7_file_system.txt"));
 }
