@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     let forest = Forest::new(include_str!("resources/day_8_forest.txt"));
 
