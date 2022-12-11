@@ -1,5 +1,6 @@
 use std::str::FromStr;
 
+#[allow(dead_code)]
 pub fn main() {
     let input = include_str!("resources/day_10_cpu_instructions.txt");
 
