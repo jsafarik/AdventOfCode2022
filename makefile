@@ -6,4 +6,4 @@ run:
 
 .PHONY: test
 test:
-	cargo test
+	cargo test $(ONLY)
