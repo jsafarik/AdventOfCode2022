@@ -59,13 +59,7 @@ impl FileSystem {
         }
     }
 
-    fn get_file(&self, idx: usize) -> &File {
-        self.files.get(idx).unwrap()
-    }
-
     fn add_file(&mut self, name: &str, size: usize, is_directory: bool) {
-        println!("Adding file {} to {}", name, self.current_parent);
-
         let index = self.files.len();
 
         self.files.push(File {
@@ -97,29 +91,6 @@ impl FileSystem {
             .find(|child| self.files.get(**child).unwrap().name == name)
             .unwrap()
             .clone();
-    }
-
-    fn find_file(&self, name: &str) -> &File {
-        self.files.iter().find(|file| file.name.as_str() == name).unwrap()
-    }
-
-    fn is_dir(&self, index: usize) -> bool {
-        self.files.get(index).unwrap().size == 0
-    }
-
-    fn print(&self, idx: usize) {
-        let parent = self.files
-            .get(idx)
-            .unwrap();
-        println!("Parent: {} ({}): {}", parent.name, "Dir", parent.size);
-
-        parent
-            .children
-            .iter()
-            .for_each(|child| {
-                let actual_child = self.files.get(*child).unwrap();
-                println!("{} ({}): {} (parent is {})", actual_child.name, if actual_child.is_directory { "Dir" } else { "File" }, actual_child.size, actual_child.parent)
-            })
     }
 
     fn calculate_dir_size(&self, idx: usize) -> usize {

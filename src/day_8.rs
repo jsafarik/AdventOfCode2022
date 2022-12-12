@@ -66,10 +66,6 @@ impl Forest {
         return Some((self.width * y + x) as usize);
     }
 
-    fn one_dim_to_two_dim(&self, a: usize) -> (u16, u16) {
-        ((a % self.width as usize) as u16, (a / self.width as usize) as u16)
-    }
-
     fn get_tree(&self, x: u16, y: u16) -> Option<u8> {
         let a = self.two_dim_to_one_dim(x, y);
         self.trees.get(a.or(Some(usize::MAX)).unwrap()).cloned()
