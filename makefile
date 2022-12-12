@@ -2,8 +2,17 @@
 
 .PHONY: run
 run:
-	cargo run
+ifdef day
+	cargo run $(day)
+else
+	@echo -e "You have to provide a day argument.\nExample:\nmake day=1"
+endif
+
 
 .PHONY: test
 test:
-	cargo test $(ONLY)
+ifdef day
+	cargo test day_$(day):
+else
+	cargo test
+endif
