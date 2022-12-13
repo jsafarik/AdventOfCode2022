@@ -12,6 +12,7 @@ mod day_8;
 mod day_9;
 mod day_10;
 mod day_11;
+mod day_12;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -30,6 +31,7 @@ fn main() {
         9 => day_9::main(),
         10 => day_11::main(),
         11 => day_11::main(),
+        12 => day_12::main(),
         _ => panic!("No solution found for given day number!")
     }
 }
